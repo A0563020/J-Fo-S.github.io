@@ -8,7 +8,7 @@ require(
     var head = document.getElementById("head");
 
     main.style.font = "18px lucida console";
-    head.style.textAlign = "center"; // doesn't seem to work the same with class names.. investigate
+    //head.style.textAlign = "center"; // doesn't seem to work the same with class names.. investigate
 
     var body = document.getElementById("body");
 
@@ -19,7 +19,7 @@ require(
     	return hslStringNums;
     }
     
-    body.style.backgroundColor = makehslString(200, 50, 80);
+    body.style.backgroundColor = makehslString(0, 0, 0);
 
     document.getElementById("article").onmousemove = function() {myFunction(event)
         }

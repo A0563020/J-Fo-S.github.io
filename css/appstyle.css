@@ -8,7 +8,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;*/
   height: 100%;
-  width: 99%; /*breaks article overflow for some reason if background image set in div - otherwise necessary for structure and overlow w/ css background image - interesting*/
+  width: 99%; 
   /*background-color: hsla(240, 40%, 75%, 0.5);*/ /* has side-effect of fixing view port of body size?*/
   position: absolute;
   z-index: 1;
@@ -19,19 +19,17 @@ body {
   width: 100%;
 }*/
 
-#img { /* can also be done as #"id" .class { */ /* Ruins structure of whole body - can't figure it out */
+#img { 
     width: 100%;
     height: 100%;
     position: absolute;
-    /*positions perhaps not the best solution to fix natural flow issues?*/
-    /*z-index: -1; /* sets overlap positioning, or z-axis */
     z-index: -1;
     opacity: 0.5;
    }
 
   #main {
-   min-height: 85%;
-   max-height: 85%;
+   min-height: 100%;
+   max-height: 100%;
    margin: 0px;
    padding: 0px;
    display: flex;
@@ -43,7 +41,7 @@ body {
    margin: 4px;
    padding: 5px;
    border: 1px solid #cccc33;
-   background: hsl(270, 50%, 70%);
+   background: #000;
    border-radius: 25px;
    flex: 3 1 65%;
    order: 2;
@@ -53,76 +51,58 @@ body {
   #main > nav {
    margin: 4px;
    padding: 5px;
-   border: 1px solid #8888bb;
+   border: 1px solid #ffffff;
    border-radius: 25px;
-   background: #ccccff;
+   background: #fff;
    flex: 1 6 15%;
    order: 1;
    }
-  
-  /*#main > aside {
-   margin: 4px;
-   padding: 5px;
-   border: 1px solid #8888bb;
-   background: #dddd88;
-   border-radius: 25px;
-   flex: 1 6 15%;
-   order: 3;
-   }*/
 
    #badger {
     text-align: center;
-    color: purple;
+    color: #fff;
    }
 
    #badger1 {
     text-align: center;
-    color: red;
+    color: #fff;
    }
- 
-  header{ /* add footer if footer*/
-   display: block;
-   margin: 4px;
-   padding: 5px;
-   min-height: 10%;
-   border: 1px solid #eebb55;
-   border-radius: 25px;
-   background: #ffeebb;
-   opacity: 0.75; /* rgba probably makes more sense to use */
-   } 
 
-   /*footer {
-    bottom: 0;
-    width: 97.5%;
-    position: absolute;
-   }*/ /* position not recognized in flex when shrunk */
-
-   .colorg {
-    background: linear-gradient(to right, orange, yellow, green); /* specify direction */
-   }
+   /*.colorg {
+    background: linear-gradient(to right, orange, yellow, green); /* specify direction
+   }*/
 
    .font {
     text-align: left;
     font-size: 10
     text-indent: 50px;
-    color: hsl(70, 100%, 80%); /* hue saturation lightness 0-0 (or 360) is red, 120 is green, 240 is blue. Saturation is a percentage value; 0% means a shade of gray and 100% is the full color. Lightness is also a percentage; 0% is black, 100% is white.*/
+    color: #000;
+    /*color: hsl(70, 100%, 80%); hue saturation lightness 0-0 (or 360) is red, 120 is green, 240 is blue. Saturation is a percentage value; 0% means a shade of gray and 100% is the full color. Lightness is also a percentage; 0% is black, 100% is white.*/
        }
    
+    .font1 {
+    text-align: center;
+    font-size: 10
+    text-indent: 50px;
+    color: #fff;
+    /*color: hsl(70, 100%, 80%); hue saturation lightness 0-0 (or 360) is red, 120 is green, 240 is blue. Saturation is a percentage value; 0% means a shade of gray and 100% is the full color. Lightness is also a percentage; 0% is black, 100% is white.*/
+    }
+
    .header {
-    text-align: left;
+    text-align: center;
+    color: #000;
    }
 
    .header1 {
     text-align: center;
+    color: #fff;
    }
 
    .quotation {
     margin-left: 10%;
     margin-right: 10%;
     padding: 2%;
-    /*
-    could set individually colored paragraphs but only have 2
-    */
+    color: #fff;
    }
 
     

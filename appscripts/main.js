@@ -43,11 +43,11 @@ require(
 
     img.style.opacity = makeopacitystring(0);
 
-    function myFunction(ev) { // works because it passes the syntax and values
+    /*function myFunction(ev) { // works because it passes the syntax and values
         makeopacitystring = (ev.clientY - article.offsetTop)/article.getBoundingClientRect().height;
         img.style.opacity = makeopacitystring; 
         //console.log(makeopacitystring);
-    }
+    }*/
 
 
     

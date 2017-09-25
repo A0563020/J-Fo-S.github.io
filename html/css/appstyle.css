@@ -1,0 +1,139 @@
+html {
+  height:100%;
+  width:99%;
+}
+
+body {
+  /*background-image: url("https://s-media-cache-ak0.pinimg.com/564x/b7/d1/9b/b7d19b9caa32982754547bc41afc4a97.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;*/
+  height: 100%;
+  width: 99%; 
+  /*background-color: hsla(240, 40%, 75%, 0.5);*/ /* has side-effect of fixing view port of body size?*/
+  position: absolute;
+  z-index: 1;
+}
+
+/*div {
+  height: 100%;
+  width: 100%;
+}*/
+
+  /*#img { 
+    /* Set rules to fill background 
+    min-height: 100%;
+    min-width: 100%;
+    
+    /* Set up proportionate scaling 
+    width: 100%;
+    height: 100%;
+    
+    /* Set up positioning 
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+    opacity: 0.5;
+   }*/
+
+  #main {
+   min-height: 100%;
+   max-height: 100%;
+   margin: 0px;
+   padding: 0px;
+   display: flex;
+   flex-flow: row;
+   opacity: 0.75; 
+   }
+ 
+  #main > article {
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #cccc33;
+   background: #000;
+   border-radius: 25px;
+   flex: 3 1 65%;
+   order: 2;
+   overflow: scroll;
+   }
+  
+  #main > nav {
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #ffffff;
+   border-radius: 25px;
+   background: #fff;
+   flex: 1 6 15%;
+   order: 1;
+   }
+
+   #badger {
+    text-align: center;
+    color: #fff;
+   }
+
+   #badger1 {
+    text-align: center;
+    color: #fff;
+   }
+
+   /*.colorg {
+    background: linear-gradient(to right, orange, yellow, green); /* specify direction
+   }*/
+
+   .font {
+    text-align: left;
+    font-size: 10
+    text-indent: 50px;
+    color: #000;
+    /*color: hsl(70, 100%, 80%); hue saturation lightness 0-0 (or 360) is red, 120 is green, 240 is blue. Saturation is a percentage value; 0% means a shade of gray and 100% is the full color. Lightness is also a percentage; 0% is black, 100% is white.*/
+       }
+   
+    .font1 {
+    text-align: center;
+    font-size: 10
+    text-indent: 50px;
+    color: #fff;
+    /*color: hsl(70, 100%, 80%); hue saturation lightness 0-0 (or 360) is red, 120 is green, 240 is blue. Saturation is a percentage value; 0% means a shade of gray and 100% is the full color. Lightness is also a percentage; 0% is black, 100% is white.*/
+    }
+
+   .header {
+    text-align: center;
+    color: #000;
+   }
+
+   .header1 {
+    text-align: center;
+    color: #fff;
+   }
+
+   .quotation {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 2%;
+    color: #fff;
+   }
+
+    
+  /* Too narrow to support three columns */
+  @media all and (max-width: 640px) {
+  
+   #main, #page  {
+    flex-flow: column;
+    flex-direction: column;
+   }
+
+   #main > article, #main > nav{ /* add #main > aside  if aside */
+    /* Return them to document order */
+            order: 0;
+   }
+   #main > nav, #main > header{ /*no article? add aside, footer if aside, footer*/
+    min-height: 50px;
+    max-height: 50px;
+   }
+  };
+
+  
+
+

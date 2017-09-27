@@ -67,7 +67,7 @@ require(
     articlea.addEventListener("mousedown", mouseDown, false);
     imga.addEventListener("mouseup", mouseUp, false);
     
-    function mouseDown (ev) {
+    function mouseDown (ev) { // try inserting p5 draw here - set up var to equal imga
         imga.style.zIndex = "1"; //z-index must be "zIndex" to avoid mistaking logical operator "-"
         bodya.style.zIndex = "-1";
         imga.style.filter = "saturate(" + makesat(10, 70) + ")";

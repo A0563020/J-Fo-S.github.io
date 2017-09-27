@@ -3,32 +3,33 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/appstyle.css">
-        <script type="text/javascript" src="jslibs/require.js" data-main="appscripts/main.js">
-        </script>
-        <!-- can use header to style as well as css doc
+        <!--<script type="text/javascript" src="jslibs/require.js" data-main="appscripts/main.js">
+        </script>-->
+        <!-- can use header to style as well as css doc-->
         <style> 
-            #main
-            background: #dddd88;
-        </style> -->
+            /*#main
+            background: #dddd88;*/
+            #content
+            {
+                position: absolute; flex: 3 1 65%;
+                order: 2; z-index: -99999; -webkit-transform: scale(2.1); -webkit-transform-origin: 0 0;
+            }
+        </style> 
         <title>site of JFS</title>
     </head>
 
     <body id="body">
-        <img id="img" src="assets/P_20151101_081631.jpg"> 
+        <!--<img id="img" src="assets/P_20151101_081631.jpg">--> 
             <div id="main">
                 <article id="article">
-                    <h2 id="badger" class="font1">A Bout..</h2>
+                    <iframe id="content" src="appscripts/index.html" width=35% height=35% scrolling="no" ></iframe>
                     <!-- note format for more than 1 class -->
-                    <p class="font1">Here is the site. And what about it. Not so beautiful. But quite spacious. Look up to sun the sun and click to see it.</p>
-
                 </article>
 
                 <nav>
                     <h1 class="header">~JFS~</h1>
 
-                    <a href="#badger" class="font">A Bout</br></a>
-                    </br>
-                    <a href="html/interests.html" class="font">Interests and Experience</br></a>
+                    <a href="html/interests.html" class="font">About..</br></a>
                     </br>
                     <a href="html/music.html" class="font">Sound and Music</br></a>
                     </br>

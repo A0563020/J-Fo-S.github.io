@@ -38,6 +38,7 @@ body {
    }*/
 
   #main {
+   position: relative;
    min-height: 100%;
    max-height: 100%;
    margin: 0px;
@@ -48,6 +49,8 @@ body {
    }
  
   #main > article {
+   
+   overflow: hidden;
    margin: 4px;
    padding: 5px;
    border: 1px solid #cccc33;
@@ -55,7 +58,6 @@ body {
    border-radius: 25px;
    flex: 3 1 65%;
    order: 2;
-   overflow: scroll;
    }
   
   #main > nav {
@@ -119,12 +121,12 @@ body {
   /* Too narrow to support three columns */
   @media all and (max-width: 640px) {
   
-   #main, #page  {
+   #main, #page, #content  {
     flex-flow: column;
     flex-direction: column;
    }
 
-   #main > article, #main > nav{ /* add #main > aside  if aside */
+   #main > article, #main > nav, #content{ /* add #main > aside  if aside */
     /* Return them to document order */
             order: 0;
    }

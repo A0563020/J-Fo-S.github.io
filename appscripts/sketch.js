@@ -12,6 +12,8 @@ function preload() {
 }
 
 function setup() {
+  w = windowWidth;
+  h = windowHeight;
   createCanvas(w, h);
   //imageMode(CENTER);
   img.resize(w, h);
@@ -22,10 +24,12 @@ function setup() {
 }
 function draw() {
   //background(0, 10, 10, 1);
+  ratioX = Math.trunc(w/32);
+  ratioY = Math.trunc(h/24);
   image(img, 0, 0); // comment this out to only show rect shapes below
   //img.loadPixels(); // loads the pixels to get the color attributes of each XY position
-  for (var x = 0; x < img.width; x += 20) {
-     for (var y = 0; y < img.height; y += 20){
+  for (var x = 0; x < img.width; x += ratioX) {
+     for (var y = 0; y < img.height; y += ratioY){
       var pixVals = ((y*w)+x)*4; //SEEMS CONFUSING AT FIRST, but each pixel has 4 values (RGBA)
       push();
       translate(x, y);
@@ -40,4 +44,11 @@ function draw() {
   	}
   }
   increment++;
+}
+
+function windowResized() {
+  w = windowWidth
+  h = windowHeight
+  resizeCanvas(w, h);
+  img.resize(w, h);
 }

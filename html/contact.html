@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html>
+<head>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+</head>
 <body>
+<script>
+	$('form#contact_form').validate({
+  messages: { },
+  submitHandler: function(form) {
+    $.ajax({
+      url: "//formspree.io/hello@reecreate.com",
+      method: "POST",
+      data: $(form).serialize(),
+      dataType: "json",
+      success: function(data) {
+          $("form#contact_form :input").prop("disabled", true);
+          $('#thanks').show();
+      }
+    });
+    return false;
+  }
+});
+</script>
 
 <h2>Contact:</h2>
 
-<form action="http://formspree.io/sherm_jonathan@hotmail.com" method="POST"><input type="email" name="_replyto"><textarea   name="body"></textarea><input type="submit" value="Send"></form>
+<form id='contact_form' method='POST'>
+  <div class='large-12 columns'>
+    <p id='thanks' style='display: none;'>
+      Thank you
+    </p>
+  </div>
+  <div class='medium-12 columns'>
+    <input class='required' name='name' placeholder='NAME' type='text'>
+    <input class='required email' name='email' placeholder='EMAIL' type='text'>
+    <input class='required' name='subject' placeholder='SUBJECT' type='text'>
+    <textarea class='required' name='message' placeholder='MESSAGE'></textarea>
+    <input class='button white' type='submit'>
+  </div>
+</form>
 
 </body>
 </html>

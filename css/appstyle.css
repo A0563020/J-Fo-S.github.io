@@ -50,6 +50,7 @@ body {
  
   #main > article {
    
+   
    overflow: hidden;
    margin: 4px;
    padding: 5px;
@@ -71,6 +72,7 @@ body {
    }
 
    #badger {
+    
     text-align: center;
     color: #fff;
    }
@@ -85,6 +87,7 @@ body {
    }*/
 
    .font {
+    font-family: "lucida console", monospace;
     text-align: left;
     font-size: 10
     text-indent: 50px;
@@ -93,6 +96,7 @@ body {
        }
    
     .font1 {
+    font-family: "lucida console", monospace;
     text-align: center;
     font-size: 10
     text-indent: 50px;

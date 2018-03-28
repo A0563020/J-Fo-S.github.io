@@ -11,22 +11,21 @@ function setup() {
   w = windowWidth;
   h = windowHeight;
   background(255);
+  noStroke();
   //frameRate(2);
 }
 function draw() {
   ratioX = Math.trunc(w/64);
   ratioY = Math.trunc(h/24);
+  var x = random(w);
+  var y = random(h);
+  var xw = random(10);
+  var c = random(50);
   var sc = random(1);
   if(sc > 0.5){
     for (var i = 0; i < w; i+=ratioX) {
       var shift = noise(xOff)*w;
       xOff = xOff + 0.001;
-      var x = random(w);
-      var y = random(h);
-      var xw = random(10);
-      var c = random(50);
-      strokeWeight(0);
-      stroke(xw-100);
       fill(c%200+55, c%100+15);
       rect(i, y, c, c);
       for (var j = 0; j < h; j+=ratioY){
@@ -41,12 +40,6 @@ function draw() {
     for (var i = 0; i < h; i+=ratioX) {
       var shift = noise(yOff)*w;
       yOff = yOff + 0.001;
-      var x = random(w);
-      var y = random(h);
-      var xw = random(10);
-      var c = random(50);
-      strokeWeight(0);
-      stroke(xw-100);
       fill(c%200+55, c%10+15);
       rect(x, i, xw, c);
       for (var j = 0; j < w; j+=ratioY){

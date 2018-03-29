@@ -3,6 +3,8 @@ var w = 640;
 var h = 480;
 var xOff = 0;
 var yOff = 0.5;
+ratioX = Math.trunc(w/64);
+ratioY = Math.trunc(h/24);
 
 function setup() {
   //var contX = document.getElementById("frame0");
@@ -15,8 +17,6 @@ function setup() {
   //frameRate(2);
 }
 function draw() {
-  ratioX = Math.trunc(w/64);
-  ratioY = Math.trunc(h/24);
   var x = random(w);
   var y = random(h);
   var xw = random(10);
@@ -27,7 +27,7 @@ function draw() {
     for (var i = 0; i < w; i+=ratioX) {
       var shift = noise(xOff)*w;
       xOff = xOff + 0.001;
-      fill(c%200+55, c%100+15);
+      fill(c%55, c%100+15);
       rect(i, y, c, c);
       for (var j = 0; j < h; j+=ratioY){
       	push();
@@ -41,7 +41,7 @@ function draw() {
     for (var i = 0; i < h; i+=ratioX) {
       var shift = noise(yOff)*w;
       yOff = yOff + 0.001;
-      fill(c%200+55, c%10+15);
+      fill(c%25, c%10+15);
       rect(x, i, xw, c);
       for (var j = 0; j < w; j+=ratioY){
         push();
@@ -57,12 +57,12 @@ function draw() {
 }
 
 function windowResized() {
-  if (w >= h) {
-	  w = windowWidth;
-	  h = windowHeight; 
+  if (w <= h) {
+	  ratioX = Math.trunc(w/24);
+    ratioY = Math.trunc(h/64);
 	} else {
-	  	w = windowHeight;
-	  	h = windowWidth;
+	  ratioX = Math.trunc(w/64);
+    ratioY = Math.trunc(h/24);
 	  }
   resizeCanvas(w, h);
   img.resize(w, h);

@@ -22,6 +22,7 @@ function draw() {
   var xw = random(10);
   var c = random(50);
   var sc = random(1);
+  //translate(w/2-noise(xOff)*w, h/2-noise(yOff)*h);
   if(sc > 0.5){
     for (var i = 0; i < w; i+=ratioX) {
       var shift = noise(xOff)*w;
@@ -44,8 +45,10 @@ function draw() {
       rect(x, i, xw, c);
       for (var j = 0; j < w; j+=ratioY){
         push();
-        fill(c%25+225, x%25+225);
-        rect(j, 2*x-shift, xw, xw);
+        translate(noise(xOff)*w, noise(yOff)*h);
+        rotate(shift*w)
+        fill(c%25+225, 0, 0, x%25+225);
+        rect(0, 0, xw, xw);
         pop();
       }
   }
@@ -54,8 +57,13 @@ function draw() {
 }
 
 function windowResized() {
-  w = windowWidth
-  h = windowHeight
+  if (w >= h) {
+	  w = windowWidth;
+	  h = windowHeight; 
+	} else {
+	  	w = windowHeight;
+	  	h = windowWidth;
+	  }
   resizeCanvas(w, h);
   img.resize(w, h);
 }

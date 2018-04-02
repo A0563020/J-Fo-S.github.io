@@ -2,45 +2,37 @@
 
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="css/appstyle.css">
-        <!--<script type="text/javascript" src="jslibs/require.js" data-main="appscripts/main.js">
-        </script>-->
-        <!-- can use header to style as well as css doc
-        <style> 
-            #main
-            background: #dddd88;
-        </style> -->
+        <link rel="stylesheet" type="text/css" href="../css/appstyle.css">
         <title>site of JFS</title>
     </head>
 
-    <body id="body">
-        <!--<img id="img" src="assets/P_20151101_081631.jpg">--> 
+    <body>
             <div id="main">
-                <article id="article">
-                     <h2 id="badger" class="font">Trademark Style Transfer and Image Synthesis</h2>
-                    <p class="font1">
+                <article class="font1">
+                     <h2 class="header1" id="sect1">Trademark Style Transfer and Image Synthesis</h2>
+                    <p>
                     </br>
                     It's a funny time for art, but perhaps not for artists. On one hand, we have AI programs that can appropriate the style of any artist onto any other image. This has led to hugely popular apps where people can apply styles to themselves from Picasso, Van Gogh and other famous artists. On the other hand, in 2016 the artist Anish Kapoor acquired exclusive rights to “Vantablack” pigment, purportedly the ‘blackest black’ the world has ever seen. Isn’t it curious that the lifework of great artists can be freely appropriated by the entire world while at the same time one artist can prevent all other artists from using a color pigment? 
                     </br></br>
-                    To contemplate this, I have designed a deep network style transfer which cross applies the vantablack to self-portraits of artists and vice versa. The self portrait is essential here - for we can see what these two contradictory processes are doing not only to an artist’s style, but to the artist her and himself as well. I hope the results cause viewers to consider the irony and ethical considerations of both phenomena as they operate upon each other simultaneously.
+                    To contemplate this, I designed a deep network style transfer which cross applies the vantablack to self-portraits of artists and vice versa. The self portrait is essential here - for we can see what these two contradictory processes are doing not only to an artist’s style, but to the artist her and himself as well. I hope the results cause viewers to consider the irony and ethical considerations of both phenomena as they operate upon each other simultaneously.
 
-                    I also found interesting results for synthesizing two images (e.g. landscapes) into one
+                    I also found interesting results for synthesizing two images (e.g. landscapes) into one. No major purpose at the moment for it, but intriguing.
                     </br> </br>
-                     <h4 class="font1">'Trademark' style transfer source images</h4>
+                     <h4>'Trademark' style transfer source images</h4>
                     </br>
                     <div>
                         <img src="../assets/vgogh.jpeg" style="float: left; margin-left: 22%; margin-bottom: 0.5em;" height="200px">
                         <img src="../assets/vanta-black-only.png" style="float: right; margin-right: 22%;margin-bottom: 0.5em;" height="200px"><p style="clear: both;">
                     </div> 
                     </br></br>
-                     <h4 class="font1">'Trademark' style transfer</h4>
+                     <h4>'Trademark' style transfer</h4>
                     </br>
                     <div>
                         <img src="../assets/stylenet_g.gif" style="float: left; margin-left: 15%; margin-bottom: 0.5em;" height="300px">
                         <img src="../assets/stylenet_h.gif" style="float: right; margin-right: 15%; margin-bottom: 0.5em;" height="300px"><p style="clear: both;">
                     </div> 
                     </br></br>
-                     <h4 class="font1">Landscape synthesis source images</h4>
+                     <h4>Landscape synthesis source images</h4>
                     </br>
                     <div>
                         <img src="../assets/116.jpg" style="float: left; margin-left: 15%; margin-bottom: 0.5em;" height="200px">
@@ -49,7 +41,7 @@
                         <img src="../assets/136.jpg" style="float: right; margin-right: 15%; margin-bottom: 0.5em;" height="200px"><p style="clear: both;">
                     </div> 
                     </br></br>
-                     <h4 class="font1">Landscape synthesis results</h4>
+                     <h4>Landscape synthesis results</h4>
                     </br>
                     <div>
                         <img src="../assets/stylenet_n.gif" style="float: left; margin-left: 15%; margin-bottom: 0.5em;" height="300px">
@@ -58,9 +50,9 @@
                     </br></br>
                     </p>  
 
-                     <h2 id="badger1" class="font1">Straight=>Curve</h2>
+                     <h2 class="header1" id="sect2">Straight=>Curve</h2>
                     <!-- note format for more than 1 class -->
-                     <p class="font1">
+                     <p>
                      <img src=../assets/Screenshot1.png width="99%">
                      Straight=>Curve is a visual companion for live musical performance. It was developed to go alongside computer music performances, but can conceivably be used in combination with any audio input or performance, including acoustic instruments. As a visual performance component, it is intended almost purely (if this possible) as aesthetics, and is not intended as a standalone piece. As the name Straight=>Curve suggests, the ‘point’ is about curvature, and bringing what is straight (lines, shapes, one’s thinking, direction in life, etc.) into a curve that is recognizable as interesting, or beautiful, on its own and in its form with its surroundings.  
                     </p>
@@ -68,27 +60,27 @@
                     <img src=../assets/Screenshot3.png width="99%">
                     <img src=../assets/Screenshot4.png width="99%">
 
-                    <h2 id="badger2" class="font">p5.js: CV, Interactive and Miscellaneous Drawings</h2>
-                    <p class="font1">
+                    <h2 class="header1" id="sect3">p5.js: CV, Interactive and Miscellaneous Drawings</h2>
+                    <p>
                     <img src="../assets/Screenshot6.png" width="99%">
                     p5.js is a fun little (big?) JavaScript interpretation of its famous older sibling, Processing. I use p5.js for teaching students and myself anything from working with shapes and geometries to simulations and works with computer vision. p5.js has performance limitations for works of larger scale, but it does have a nice niche.
                     </br></br> 
                     Try a few of the programs below
                     </br></br>
-                     <a class="font1" href="07-screenFillShapesInteractive/index.html">Vanishing Circles Horizon</br></a>
-                     <a class="font1" href="12-screenFillShapesTanRotate3/index.html">Central Rotations in Colors</br></a>
-                     <a class="font1" href="13-screenFillShapesTanRotate3D/index.html">3D Rotations</br></a>
+                     <a href="07-screenFillShapesInteractive/index.html">Vanishing Circles Horizon</br></a>
+                     <a href="12-screenFillShapesTanRotate3/index.html">Central Rotations in Colors</br></a>
+                     <a href="13-screenFillShapesTanRotate3D/index.html">3D Rotations</br></a>
                     </p>    
 
                 </article>
 
-                <nav>
+                <nav class="font">
                     <h1 class="header">~Visual and Interactive Work~</h1>
-                    <a href="#badger" class="font">Trademark Style Transfer and Image Synthesis</br></a>
+                    <a href="#sect1">Trademark Style Transfer and Image Synthesis</br></a>
                     </br>
-                    <a href="#badger1" class="font">Straight=>Curve</br></a>
+                    <a href="#sect2">Straight=>Curve</br></a>
                     </br>
-                    <a href="#badger2" class="font">p5.js: CV, Interactive and Miscellaneous Drawings</br></a>
+                    <a href="#sect3">p5.js: CV, Interactive and Miscellaneous Drawings</br></a>
                     </br>
                     <a href="../index.html" class="font">Home</a>
                 </nav>
